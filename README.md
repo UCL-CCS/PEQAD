@@ -1,4 +1,4 @@
-# PyTorch Implementation of Quantum SVDD
+# PyTorch Implementation of Quantum SVDD (Parameter-Efficient Quantum Anomaly Detection Method)
 This repository provides a [PyTorch](https://pytorch.org/) implementation of the *Quantum SVDD* method presented in our 2024 paper ”A Parameter-Efficient Quantum Anomaly Detection Method on a Superconducting Quantum Processor”.
 
 
@@ -15,10 +15,10 @@ If you would like to get in touch, please contact [maida.wang.24@ucl.ac.uk](mail
 
 
 ## Abstract
-Quantum machine learning has gained attention for its potential to address computational challenges. However, whether those algorithms can effectively solve practical problems and outperform their classical counterparts, especially on current quantum hardware, remains a critical question. In this work, we propose a novel quantum machine learning method, called Quantum Support Vector Data Description (QSVDD), for practical image anomaly detection, which aims to achieve both parameter efficiency and superior accuracy compared to classical models.  Emulation results indicate that QSVDD demonstrates favourable recognition capabilities compared to classical baselines, achieving an average accuracy of over 90% on benchmarks with significantly fewer trainable parameters. Theoretical analysis confirms that QSVDD has a comparable expressivity to classical counterparts while requiring only a fraction of the parameters.
-Furthermore, we demonstrate the first implementation of a quantum anomaly detection method for general image datasets on a superconducting quantum processor. Specifically, we achieve an accuracy of over 80% with only 16 parameters on the device, providing initial evidence of QSVDD's practical viability in the noisy intermediate-scale quantum era and highlighting its significant reduction in parameter requirements.
+Quantum machine learning has gained attention for its potential to address computational challenges. However, whether those algorithms can effectively solve practical problems and outperform their classical counterparts, especially on current quantum hardware, remains a critical question. In this work, we propose a novel quantum machine learning method, called Parameter-Efficient Quantum Anomaly Detection Method (PEQAD), for practical image anomaly detection, which aims to achieve both parameter efficiency and superior accuracy compared to classical models.  Emulation results indicate that PEQAD demonstrates favourable recognition capabilities compared to classical baselines, achieving an average accuracy of over 90% on benchmarks with significantly fewer trainable parameters. Theoretical analysis confirms that PEQAD has a comparable expressivity to classical counterparts while requiring only a fraction of the parameters.
+Furthermore, we demonstrate the first implementation of a quantum anomaly detection method for general image datasets on a superconducting quantum processor. Specifically, we achieve an accuracy of over 80% with only 16 parameters on the device, providing initial evidence of PEQAD's practical viability in the noisy intermediate-scale quantum era and highlighting its significant reduction in parameter requirements.
 
-![QSVDD on processor(only)](https://github.com/user-attachments/assets/ba85a024-9de5-4c66-a667-13b902d57039)
+![PEQAD on processor(only)](https://github.com/user-attachments/assets/ba85a024-9de5-4c66-a667-13b902d57039)
 
 
 
@@ -28,7 +28,7 @@ This code is written in `Python 3.8` and requires the packages listed in `requir
 
 Clone the repository to your local machine and directory of choice:
 ```
-[git clone https://github.com/UCL-CCS/QSVDD.git]
+[git clone https://github.com/UCL-CCS/PEQAD.git]
 ```
 
 To run the code, we recommend setting up a virtual environment, e.g. using `virtualenv` or `conda`:
@@ -76,7 +76,7 @@ cd src
 python main.py mnist mnist_LeNet ../log/mnist_test ../data --objective one-class --lr 0.0001 --n_epochs 150 --lr_milestone 50 --batch_size 200 --weight_decay 0.5e-6 --pretrain True --ae_lr 0.0001 --ae_n_epochs 150 --ae_lr_milestone 50 --ae_batch_size 200 --ae_weight_decay 0.5e-3 --normal_class 3;
 ```
 This example trains a Quantum SVDD model where digit 3 (`--normal_class 3`) is considered to be the normal class. Autoencoder
-pretraining is used for parameter initialization.
+Pretraining is used for parameter initialization.
 
 ### FashionMNIST example
 ```
@@ -117,7 +117,7 @@ This example trains a Quantum SVDD model where cats (`--normal_class 3`) are con
 Autoencoder pretraining is used for parameter initialization.
 
 ## Experiments
-We can run QSVDD on several different quantum devices, including superconducting processors and photonic processors (IBM IQM Quafu). We also plan to implement this method on more and larger scale chips in the future.
+We can run PEQAD on several different quantum devices, including superconducting processors and photonic processors (IBM IQM Quafu). We also plan to implement this method on more and larger scale chips in the future.
 If any academic organization has hardware and would like to run the algorithm on their hardware, please contact the authors.
 
 
