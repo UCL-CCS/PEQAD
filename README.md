@@ -1,14 +1,23 @@
 # PyTorch Implementation of Quantum SVDD (Parameter-Efficient Quantum Anomaly Detection Method)
-This repository provides a [PyTorch](https://pytorch.org/) implementation of the *Quantum SVDD* method presented in our 2024 paper ”A Parameter-Efficient Quantum Anomaly Detection Method on a Superconducting Quantum Processor”.
+This repository provides a [PyTorch](https://pytorch.org/) implementation of the *Quantum SVDD* method presented in our 2025 paper ”A Parameter-Efficient Quantum Anomaly Detection Method on a Superconducting Quantum Processor”.
 
 
 ## Citation and Contact
-You can find a PDF of the A Parameter-Efficient Quantum Anomaly Detection Method on a Superconducting Quantum Processor paper at 
-[[http://](https://arxiv.org/abs/2412.16867)].
+You can find a PDF of the Parameter-Efficient Quantum Anomaly Detection Method on a Superconducting Quantum Processor paper at 
+[[https://doi.org/10.1103/cv9y-2cnj](https://doi.org/10.1103/cv9y-2cnj)].
 
 If you use our work, please also cite the paper:
 ```
-https://arxiv.org/abs/2412.16867
+@article{wang2025parameter,
+  title={Parameter-efficient quantum anomaly detection method on a superconducting quantum processor},
+  author={Wang, Maida and Jiang, Jinyang and Coveney, Peter V},
+  journal={Physical Review Research},
+  volume={7},
+  number={4},
+  pages={043094},
+  year={2025},
+  publisher={APS}
+}
 ```
 
 If you would like to get in touch, please contact [maida.wang.24@ucl.ac.uk](mailto:maida.wang.24@ucl.ac.uk).
